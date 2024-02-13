@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to right,#836FFF,#211951);
+}
+
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    transform-style: preserve-3d;
+}
+.container .box{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin: 40px;
+    background: rgba(0, 0, 0, 0.183);
+    border-radius: 20px;
+    transform-style: preserve-3d;
+}
+.container .box .name{
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-align: center;
+    width: 100%;
+    transform-style: preserve-3d;
+    color: #fff;
+    opacity: 0;
+    z-index: 10;
+    transition: 0.5s;
+}
+.container .box:hover .name{
+    top: 40px;
+    opacity: 1;
+    transform: translate3d(0,0,100px);
+}
+
+.container .box .hoverme{
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform-style: preserve-3d;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.183);
+    backdrop-filter: blur(5px);
+    padding: 20px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.5s;
+    transform: translate3d(-50%,0,0);
+    width: 120px;
+    font-weight: 600;
+    text-align: center;
+    z-index: 10;
+}
+.container .box .image{
+    position: absolute;
+    top:10%;
+    left: 5%;
+    transform-style: preserve-3d;
+    transform: translate3d(-50%,-50%);
+    height: 250px;
+    max-width: 300px;
+    transition: 0.5s;
+}
+.container .box:hover .image{
+    transform: translate3d(0,0,100px);
+}
